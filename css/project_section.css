@@ -1,0 +1,27 @@
+/* 1) Assicuriamoci che l’header sia sempre in primo piano e “fuori” dal flusso */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding-bottom: 4rem;
+  }
+  
+ 
+  .project-hero {
+    text-align: center;
+  }
+  
+ main {
+    padding-top: 4rem; /* Spazio per l'header */
+  }
+
+  .project-hero img {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 12px;
+    display: block;
+  }

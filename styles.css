@@ -1,0 +1,376 @@
+/* Importa il font Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* --- Variabili per il tema --- */
+/* Tema chiaro */
+:root {
+  --bg-color: #f9f9f9;
+  --text-color: #333;
+  --primary: #1a73e8;
+  --accent: #fbbc04;
+  --section-bg-start: #ffffff;
+  --section-bg-end: #e6efff;
+  --nav-bg: rgba(255, 255, 255, 0.9);
+  --footer-bg: #5a8faf; /* azzurro desaturato */
+  --footer-text: #1a1a1a; /* testo scuro */
+}
+
+/* Tema scuro */
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --primary: #8ab4f8;
+  --accent: #fbbc04;
+  --section-bg-start: #1e1e1e;
+  --section-bg-end: #2c2c2c;
+  --nav-bg: rgba(18, 18, 18, 0.9);
+  --footer-bg: #1a1a1a; /* grigio scuro elegante */
+  --footer-text: #e0f0ff; /* azzurrino chiaro pastello */
+}
+
+/* --- Reset di base --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --- Stili globali --- */
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* --- Navigation --- */
+header nav {
+  background: var(--nav-bg);
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Contenitore centrato per il nav */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  display: flex;
+  gap: 0.5rem;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: bold;
+  display: inline-block;
+  transition: transform 0.5s ease;
+}
+
+header nav ul li a:hover {
+  transform: rotate(360deg);
+}
+
+/* Toggle container per dark mode e lingua */
+.toggle-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Stili di base per i bottoni nel toggle container */
+.toggle-container button {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  color: var(--text-color);
+  transition: transform 0.3s ease;
+}
+
+.toggle-container button:hover {
+  transform: scale(1.1);
+}
+
+/* Stile per il bottone dark mode */
+#dark-mode-toggle {
+  font-size: 1.5rem;
+  border: 1px solid var(--text-color);
+  border-radius: 4px;
+  padding: 0.3rem 0.5rem;
+  background: transparent;
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+
+#dark-mode-toggle:hover {
+  background: var(--primary);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Stili per i bottoni di cambio lingua */
+button.lang-toggle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  text-transform: none;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--text-color);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  display: inline-block !important; /* Forza la visibilità */
+}
+
+button.lang-toggle:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* --- Hero Section --- */
+header .hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  color: #fff;
+}
+
+/* Animazioni per il contenuto della hero */
+.hero-content.animate h1 {
+  opacity: 0;
+  animation: slideIn 1s forwards;
+}
+
+.hero-content.animate .hero-subtitle {
+  font-size: 1.50rem;
+  margin-bottom: 1rem;
+  opacity: 0;
+  animation: slideIn 1s forwards;
+  animation-delay: 0.3s;
+}
+
+.hero-content.animate p {
+  font-size: 1.5rem;
+  opacity: 0;
+  animation: slideIn 1s forwards;
+  animation-delay: 0.5s;
+}
+
+/* (La keyframe slideIn può restare invariata) */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* --- Sezioni principali --- */
+main section {
+  position: relative;
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, var(--section-bg-start), var(--section-bg-end));
+  margin: 2rem auto;
+  max-width: 1200px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  scroll-margin-top: 100px; /* Evita che il nav fisso copra il contenuto ancorato */
+}
+
+main section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 12px;
+  background: linear-gradient(180deg, var(--primary), var(--accent));
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+main section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+main section:target h2 {
+  animation: fadeIn 1s;
+}
+
+main section:target p {
+  animation: fadeIn 1s;
+  animation-delay: 0.5s;
+}
+
+main section p {
+  font-size: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* --- About --- */
+section#about p + p {
+  margin-top: 0.8em;
+}
+
+section#about p {
+  text-align: justify; /* oppure left */
+  line-height: 1.6;
+}
+
+/* --- Sezione Contact --- */
+section#contact {
+  padding: 2em;
+  /*border-left: 6px solid #1a73e8;
+  background: white;*/
+  background: linear-gradient(135deg, var(--section-bg-start), var(--section-bg-end));
+  max-width: 1200px;
+  margin: 32px auto; 
+  animation: fadeIn 1s ease-in-out;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  margin-top: 1.5em;
+}
+
+form {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+}
+
+input, textarea {
+  padding: 0.6em;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  /*background-color: #1a73e8;*/
+  background-color: var(--footer-bg);
+  color: white;
+  border: none;
+  padding: 0.8em;
+  font-size: 1em;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-info {
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.4em;
+  font-size: 0.95em;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Dark Mode per sezione Contatti */
+body.dark-mode section#contact {
+  background: var(--section-bg-end);
+  color: var(--text-color);
+  /*border-left: 6px solid var(--primary);*/
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+  background-color: #2c2c2c;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+body.dark-mode button {
+  background-color: var(--primary);
+  color: white;
+}
+
+body.dark-mode .contact-info a {
+  color: var(--primary);
+}
+
+/* --- Footer --- */
+footer {
+  padding: 2rem;
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  text-align: center;
+}
+
+/* --- Responsività --- */
+@media (max-width: 768px) {
+  header .hero h1 {
+    font-size: 2.5rem;
+  }
+  header .hero p {
+    font-size: 1.2rem;
+  }
+  header nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+.cv-confirmation {
+  margin-top: 1em;
+  color: green;
+  font-weight: bold;
+  animation: fadeIn 0.5s ease;
+}
+
+/* --- Regole per il multilingua --- */
+[data-lang="it"] { display: block; }
+[data-lang="en"] { display: none; }
+body.lang-en [data-lang="it"] { display: none; }
+body.lang-en [data-lang="en"] { display: block; }

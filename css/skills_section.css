@@ -1,0 +1,50 @@
+/* skills_section.css */
+#skills {
+    padding: 4rem 2rem;
+    /* background: var(--section-bg-end); */
+    background: linear-gradient(135deg, var(--section-bg-start), var(--section-bg-end));
+    color: var(--text-color);
+  }
+  
+  .skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .skill-card {
+    background: var(--section-bg-start);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  }
+  
+  .skill-card i {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .skill-card h3 {
+    margin: 0.5rem 0 0.25rem;
+    font-size: 1.1rem;
+  }
+  
+  .skill-card p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+  
+  /* Dark mode: il background del card diventa più scuro */
+  body.dark-mode .skill-card {
+    background: var(--bg-color);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  }
+  

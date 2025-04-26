@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sito Vetrina Personale</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/skills_section.css">
+  <link rel="stylesheet" href="css/portfolio_section.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+  <!-- EmailJS SDK -->
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function(){
+      emailjs.init({
+        publicKey: "public_XXXXXXXXXXXXXXXX" // la tua Public Key
+      });
+    })();
+  </script>
+
+</head>
+
+<body class="lang-it">
+  <header id="home">
+    <nav>
+      <div class="nav-container">
+        <ul>
+          <li>
+            <a href="#home" data-lang="it">Home</a>
+            <a href="#home" data-lang="en">Home</a>
+          </li>
+          <li>
+            <a href="#about" data-lang="it">Chi sono</a>
+            <a href="#about" data-lang="en">About</a>
+          </li>
+          <li>
+            <a href="#skills" data-lang="it">Competenze</a>
+            <a href="#skills" data-lang="en">Skills</a>
+          </li>
+          <li>
+            <a href="#portfolio" data-lang="it">Portfolio</a>
+            <a href="#portfolio" data-lang="en">Portfolio</a>
+          </li>
+          <li>
+            <a href="#contact" data-lang="it">Contatti</a>
+            <a href="#contact" data-lang="en">Contact</a>
+          </li>
+        </ul>
+        <div class="toggle-container">
+          <!-- Bottone per il dark mode -->
+          <button id="dark-mode-toggle" title="Toggle Dark Mode">🌙</button>
+          <!-- Bottoni per la lingua -->
+          <button class="lang-toggle" data-lang="it" title="Italiano">IT</button>
+          <button class="lang-toggle" data-lang="en" title="English">EN</button>
+        </div>
+      </div>
+    </nav>
+    <div class="hero">
+      <div class="hero-content animate">
+        <h1 data-lang="it">Ciao, sono Riccardo Mechi</h1>
+        <h1 data-lang="en">Hi, I'm Riccardo Mechi</h1>
+        <!-- Sottotitolo -->
+        <h2 class="hero-subtitle" data-lang="it">
+            IT Project Manager e Full Stack Web Developer
+        </h2>
+        <h2 class="hero-subtitle" data-lang="en">
+            IT Project Manager and Full Stack Web Developer
+        </h2>
+        <p data-lang="it">Benvenuto nel mio sito personale</p>
+        <p data-lang="en">Welcome to my personal website</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2 data-lang="it">Chi sono</h2>
+      <h2 data-lang="en">About Me</h2>
+      <p data-lang="it">
+        Sono un IT Project Manager con una solida esperienza nella gestione di progetti digitali e nello sviluppo di soluzioni web su misura. 
+        Il mio approccio unisce competenze tecniche, attenzione al dettaglio e una visione strategica orientata all’efficienza e alla qualità del risultato finale.
+      </p>
+      <p data-lang="it">
+        Come sviluppatore web, mi occupo della realizzazione di interfacce moderne, funzionali e responsive, utilizzando HTML5, CSS3 e JavaScript o React. 
+        Collaboro attivamente in ogni fase del ciclo di vita del progetto, garantendo coerenza tra obiettivi, design e sviluppo tecnico.
+      </p>
+      <p data-lang="en">
+        I’m an IT Project Manager with solid experience in leading digital projects and developing custom web solutions. 
+        I combine technical expertise with strategic thinking and a detail-oriented mindset to ensure efficient, high-quality results.
+      </p>
+      <p data-lang="en">
+        As a web developer, I create modern, functional, and responsive interfaces using HTML5, CSS3, and JavaScript or React. 
+        I actively collaborate in every phase of the project lifecycle, ensuring consistency between objectives, design, and technical development.
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2>
+        <span data-lang="it">Competenze</span>
+        <span data-lang="en">Skills</span>
+      </h2>
+      <div class="skills-container">
+        <div class="skill-card">
+          <i class="devicon-html5-plain colored" title="HTML5"></i>
+          <h3>HTML5</h3>
+          <p data-lang="it">Strutturazione semantica e accessibile dei documenti HTML5.</p>
+          <p data-lang="en">Semantic and accessible structuring of HTML5 documents.</p>
+        </div>
+        <div class="skill-card">
+          <i class="devicon-css3-plain colored" title="CSS3"></i>
+          <h3>CSS3</h3>
+          <p data-lang="it">Stili modulari e responsive con Flexbox e Grid.</p>
+          <p data-lang="en">Modular, responsive styling with Flexbox and Grid.</p>
+        </div>
+        <!-- JavaScript, React, Node.js… -->
+      </div>
+    </section>
+        
+    <section id="portfolio">
+      <h2 data-lang="it">Portfolio</h2>
+      <h2 data-lang="en">Portfolio</h2>
+      <div class="portfolio-container">
+        <!-- Project 1 -->
+        <a href="project1.html" class="portfolio-card">
+          <!-- <img src="assets/projects/project1.jpg" alt="Preview Project 1"> 
+          <img src="https://placehold.co/800x450/cccccc/555555?text=Proj+1" alt="Placeholder Project 1"/> -->
+          <img src="assets/placeholder.png" alt="Project Placeholder"/>
+
+          <div class="card-content">
+            <h3 data-lang="it">Progetto 1</h3>
+            <h3 data-lang="en">Project 1</h3>
+            <p data-lang="it">Breve descrizione del progetto in italiano.</p>
+            <p data-lang="en">Short description of the project in English.</p>
+          </div>
+        </a>
+  
+        <!-- Project 2 -->
+        <a href="project2.html" class="portfolio-card">
+          <!-- <img src="assets/projects/project2.jpg" alt="Preview Project 2"> -->
+          <img src="assets/placeholder.png" alt="Project Placeholder 2"/>
+          <div class="card-content">
+            <h3 data-lang="it">Progetto 2</h3>
+            <h3 data-lang="en">Project 2</h3>
+            <p data-lang="it">Breve descrizione del progetto in italiano.</p>
+            <p data-lang="en">Short description of the project in English.</p>
+          </div>
+        </a>
+        
+      </div>
+      <!-- <p data-lang="it">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi.
+      </p>
+      <p data-lang="en">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi.
+      </p> -->
+    </section>
+    
+    <section id="contact" class="animate">
+      <h2 data-lang="it">Contatti</h2>
+      <h2 data-lang="en">Contact me</h2>
+      <p class="contact-intro" data-lang="it">
+        Compila il modulo per contattarmi e per ricevere il mio CV.
+      <p class="contact-intro" data-lang="en">
+          Fill the form to contact me and Download my CV.  
+      </p>
+  
+      <div class="contact-container">
+        <form id="cv-request-form">
+          <label for="name" data-lang="it">Nome:</label>
+          <label for="name" data-lang="en">Name:</label>
+          <input type="text" id="name" name="name" required>
+  
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+  
+          <label for="message" data-lang="it">Messaggio:</label>
+          <label for="message" data-lang="en">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+  
+          <button type="submit" data-lang="it">Contattami & Scarica CV</button>
+          <button type="submit" data-lang="en">Contact me & Download CV</button>
+        </form>
+  
+        <div class="contact-info">
+          <p data-lang="it"><strong>Email:</strong> you@example.com</p>
+          <p data-lang="en"><strong>Email:</strong> you@example.com</p>
+          <p data-lang="it"><strong>Telefono:</strong> +39 333 0000000</p>
+          <p data-lang="en"><strong>Moblie:</strong> +39 333 0000000</p>
+          <p data-lang="it"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/tuo-profilo" target="_blank">Profilo LinkedIn</a></p>
+          <p data-lang="en"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/tuo-profilo" target="_blank">LinkedIn Profile</a></p>
+          <p data-lang="it"><strong>Zona:</strong> Torino (TO) e Area Metropolitana</p>
+          <p data-lang="en"><strong>Area:</strong> Turin Metropolitan Area (TO)</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p data-lang="it">&copy; 2025 Riccardo Mechi. Tutti i diritti riservati.</p>
+    <p data-lang="en">&copy; 2025 Riccardo Mechi. All Rights reserved.</p>
+  </footer>
+
+  <!-- Includi il file JavaScript esterno -->
+  <script src="cv_simple_multi.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
