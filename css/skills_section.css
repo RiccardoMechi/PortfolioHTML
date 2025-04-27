@@ -13,15 +13,29 @@
     max-width: 1000px;
     margin: 0 auto;
   }
+
+  .skills-grid {
+    display: grid;
+    gap: 1.5rem;
+    /* imposta 140px come larghezza minima per ogni colonna */
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+
+  .break-word {
+    overflow-wrap: break-word; /* spezza le parole se non ci stanno */
+    word-break: break-word;    /* forza il wrapping in casi estremi */
+    hyphens: auto;             /* sillabazione automatica, se supportata */
+  }
   
   .skill-card {
+    min-width: 140px;
     background: var(--section-bg-start);
     border-radius: 12px;
     padding: 1.5rem;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-  
+
   .skill-card:hover {
     transform: translateY(-6px) scale(1.03);
     box-shadow: 0 8px 20px rgba(0,0,0,0.12);
@@ -39,7 +53,7 @@
   
   .skill-card p {
     font-size: 0.9rem;
-    opacity: 0.8;
+    opacity: 0.8;    
   }
   
   /* Dark mode: il background del card diventa più scuro */

@@ -4,10 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sito Vetrina Personale</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"/>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="css/skills_section.css">
   <link rel="stylesheet" href="css/portfolio_section.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  
 
   <!-- EmailJS SDK -->
   <script type="text/javascript"
@@ -102,7 +106,7 @@
         <span data-lang="it">Competenze</span>
         <span data-lang="en">Skills</span>
       </h2>
-      <div class="skills-container">
+      <div class="skills-container skills-grid break-word">
         <div class="skill-card">
           <i class="devicon-html5-plain colored" title="HTML5"></i>
           <h3>HTML5</h3>
@@ -115,7 +119,90 @@
           <p data-lang="it">Stili modulari e responsive con Flexbox e Grid.</p>
           <p data-lang="en">Modular, responsive styling with Flexbox and Grid.</p>
         </div>
-        <!-- JavaScript, React, Node.js… -->
+        <div class="skill-card">
+          <i class="devicon-javascript-plain colored" title="JavaScript"></i>
+          <h3>JavaScript</h3>
+          <p data-lang="it">Programmazione orientata agli oggetti e funzionale in JS</p>
+          <p data-lang="en">Object-oriented and functional programming in JS</p>
+        </div>
+        <div class="skill-card">
+          <i class="devicon-react-original colored" title="React"></i>
+          <h3>React</h3>
+          <p data-lang="it">Costruzione di interfacce utente reattive con React.js</p>
+          <p data-lang="en">Building reactive UIs with React.js</p>
+        </div>
+        <div class="skill-card">
+          <i class="devicon-nodejs-plain colored" title="Node.js"></i>
+          <h3>Node.js</h3>
+          <p data-lang="it">Server-side development con Node.js</p>
+          <p data-lang="en">Server-side development with Node.js</p>
+        </div>
+        <div class="skill-card">
+          <i class="devicon-mongodb-plain colored" title="MongoDB"></i>
+          <h3>MongoDB</h3>
+          <p data-lang="it">Database NoSQL orientato ai documenti</p>
+          <p data-lang="en">Document-based NoSQL database</p>
+        </div>
+        <div class="skill-card">
+          <i class="devicon-git-plain colored" title="Git"></i>
+          <h3>Git</h3>
+          <p data-lang="it">Controllo di versione e flussi di lavoro Git</p>
+          <p data-lang="en">Version control and Git workflows</p>
+        </div>
+        <div class="skill-card">
+          <i class="devicon-docker-plain colored" title="Docker"></i>
+          <h3>Docker</h3>
+          <p data-lang="it">Containerizzazione e distribuzione con Docker</p>
+          <p data-lang="en">Containerization and deployment with Docker</p>
+        </div>
+        <div class="skill-card">
+          <i class="devicon-mysql-plain colored" title="SQL"></i>
+          <h3>SQL</h3>
+          <p data-lang="it">Gestione e interrogazione di basi di dati relazionali con SQL</p>
+          <p data-lang="en">Managing and querying relational databases with SQL</p>
+        </div>
+        <div class="skill-card">
+          <i class="devicon-php-plain colored" title="PHP"></i>
+          <h3>PHP</h3>
+          <p data-lang="it">Scripting lato server per applicazioni web dinamiche</p>
+          <p data-lang="en">Server-side scripting for dynamic web applications</p>
+        </div>
+        <div class="skill-card">
+          <i class="fa-solid fa-code" title="OOP"></i>
+          <h3>OOP</h3>
+          <p data-lang="it">Programmazione orientata agli oggetti per strutturare il codice in classi e oggetti</p>
+          <p data-lang="en">Object-oriented programming for structuring code into classes and objects</p>
+        </div>
+        <div class="skill-card">
+          <i class="fa-solid fa-pencil-ruler" title="UI/UX Design"></i>
+          <h3>UI/UX Design</h3>
+          <p data-lang="it">Progettazione di interfacce intuitive e ottimizzazione dell&#39esperienza utente</p>
+          <p data-lang="en">Designing intuitive interfaces and optimizing user experience</p>
+        </div>
+        <div class="skill-card">
+          <i class="fa-solid fa-users" title="Teamwork"></i>
+          <h3>Teamwork</h3>
+          <p data-lang="it">Collaborazione efficace in team cross-funzionali</p>
+          <p data-lang="en">Effective collaboration in cross-functional teams</p>
+        </div>
+        <div class="skill-card">
+          <i class="fa-solid fa-user-tie" title="Leadership"></i>
+          <h3>Leadership</h3>
+          <p data-lang="it">Guida proattiva e motivazione del team verso gli obiettivi</p>
+          <p data-lang="en">Proactive leadership and motivating the team toward goals</p>
+        </div>
+        <div class="skill-card">
+          <i class="fa-solid fa-brain" title="Implementazione AI"></i>
+          <h3>Implementazione AI</h3>
+          <p data-lang="it">Integrazione di soluzioni di intelligenza artificiale nei processi aziendali</p>
+          <p data-lang="en">Integrating artificial intelligence solutions into business processes</p>
+        </div>
+        <div class="skill-card">
+          <i class="fa-solid fa-comment" title="Effective Communication"></i>
+          <h3>Effective Communication</h3>
+          <p data-lang="it">Comunicazione chiara e persuasiva con stakeholder e colleghi</p>
+          <p data-lang="en">Clear and persuasive communication with stakeholders and colleagues</p>
+        </div>
       </div>
     </section>
         
@@ -127,28 +214,76 @@
         <a href="project1.html" class="portfolio-card">
           <!-- <img src="assets/projects/project1.jpg" alt="Preview Project 1"> 
           <img src="https://placehold.co/800x450/cccccc/555555?text=Proj+1" alt="Placeholder Project 1"/> -->
-          <img src="assets/placeholder.png" alt="Project Placeholder"/>
+          <img src="assets/taskmaster2.png" alt="Project Placeholder"/>
 
           <div class="card-content">
-            <h3 data-lang="it">Progetto 1</h3>
-            <h3 data-lang="en">Project 1</h3>
-            <p data-lang="it">Breve descrizione del progetto in italiano.</p>
-            <p data-lang="en">Short description of the project in English.</p>
+            <h3 data-lang="it">TaskMaster – Productivity PWA</h3>
+            <h3 data-lang="en">TaskMaster – Productivity PWA</h3>
+            <p data-lang="it">App web progressiva per gestire attività, con drag-&-drop e notifiche.</p>
+            <p data-lang="en">Progressive web app to manage tasks, with drag-&-drop and notifications.</p>
           </div>
         </a>
   
         <!-- Project 2 -->
         <a href="project2.html" class="portfolio-card">
           <!-- <img src="assets/projects/project2.jpg" alt="Preview Project 2"> -->
-          <img src="assets/placeholder.png" alt="Project Placeholder 2"/>
+          <img src="assets/marketvue.png" alt="Project Placeholder 2"/>
           <div class="card-content">
-            <h3 data-lang="it">Progetto 2</h3>
-            <h3 data-lang="en">Project 2</h3>
-            <p data-lang="it">Breve descrizione del progetto in italiano.</p>
-            <p data-lang="en">Short description of the project in English.</p>
+            <h3 data-lang="it">MarketVue – E-Commerce Analytics Dashboard</h3>
+            <h3 data-lang="en">MarketVue – E-Commerce Analytics Dashboard</h3>
+            <p data-lang="it">Dashboard real-time per monitorare vendite, traffico e KPI.</p>
+            <p data-lang="en">Real-time dashboard to monitor sales, traffic and KPIs.</p>
           </div>
         </a>
         
+        <!-- Project 3 -->
+        <a href="project3.html" class="portfolio-card">
+          <!-- <img src="assets/projects/project2.jpg" alt="Preview Project 2"> -->
+          <img src="assets/blogotech.png" alt="Project Placeholder 2"/>
+          <div class="card-content">
+            <h3 data-lang="it">BlogoTech – Headless CMS Blog Platform</h3>
+            <h3 data-lang="en">BlogoTech – Headless CMS Blog Platform</h3>
+            <p data-lang="it">Piattaforma headless per creare blog veloci e sicuri.</p>
+            <p data-lang="en">Headless platform to build fast and secure blogs.</p>
+          </div>
+        </a>
+
+        <!-- Project 4 -->
+        <a href="project4.html" class="portfolio-card">
+          <!-- <img src="assets/projects/project2.jpg" alt="Preview Project 2"> -->
+          <img src="assets/chatconnect.png" alt="Project Placeholder 2"/>
+          <div class="card-content">
+            <h3 data-lang="it">ChatConnect – Applicazione di Chat in Tempo Reale</h3>
+            <h3 data-lang="en">ChatConnect – Real time Chat App</h3>
+            <p data-lang="it">Web app di chat one-to-one e di gruppo con WebSocket.</p>
+            <p data-lang="en">One-to-one and group chat web app with WebSocket.</p>
+          </div>
+        </a>
+
+        <!-- Project 5 -->
+        <a href="project5.html" class="portfolio-card">
+          <!-- <img src="assets/projects/project2.jpg" alt="Preview Project 2"> -->
+          <img src="assets/aisummarizer.png" alt="Project Placeholder 2"/>
+          <div class="card-content">
+            <h3 data-lang="it">AI Summarizer – Strumento di Sintesi Contenuti</h3>
+            <h3 data-lang="en">AI Summarizer – Automatic Summary Tool</h3>
+            <p data-lang="it">Tool AI per riassumere automaticamente testi lunghi.</p>
+            <p data-lang="en">AI tool to automatically summarize long texts.</p>
+          </div>
+        </a>
+
+        <!-- Project 6 -->
+        <a href="project6.html" class="portfolio-card">
+          <!-- <img src="assets/projects/project2.jpg" alt="Preview Project 2"> -->
+          <img src="assets/placeholder.png" alt="Project Placeholder 2"/>
+          <div class="card-content">
+            <h3 data-lang="it">Spazio per progetti futuri</h3>
+            <h3 data-lang="en">Next Project goes here</h3>
+            <p data-lang="it">Testo descrittivo in Italiano</p>
+            <p data-lang="en">Short English Description Text</p>
+          </div>
+        </a>
+
       </div>
       <!-- <p data-lang="it">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi.
