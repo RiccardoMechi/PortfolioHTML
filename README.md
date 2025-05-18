@@ -3,6 +3,8 @@
 Welcome to my personal web portfolio!
 
 This project showcases my professional experience, technical skills, and selected web projects as an IT Project Manager and Full Stack Web Developer.
+In this phase of the project, the Portfolio Section contains fake projects.
+This site is meant as a showcase by itself.
 
 ---
 
