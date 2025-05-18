@@ -1,101 +1,73 @@
-# Portfolio di Riccardo Mechi
+# Personal Portfolio – Riccardo Mechi
 
-Sito web vetrina personale per presentare competenze e progetti di **Riccardo Mechi**, IT Project Manager e Full Stack Web Developer.
+Welcome to my personal web portfolio!
 
----
-
-## 🚀 Panoramica
-
-Questo progetto è un sito statico realizzato con HTML, CSS e JavaScript puro (`vanilla JS`), pensato per:
-
-- Mostrare **hero section** di benvenuto con animazioni.
-- Gestire **modalità Light/Dark** con salvataggio della preferenza.
-- Offrire **supporto multi-lingua** (italiano/inglese) senza ricaricare la pagina.
-- Esibire una sezione **Competenze** (Skills) con card interattive.
-- Far provare una sezione **Portfolio** con anteprime dei progetti e pagine dettaglio dedicate.
-- Includere un **form di contatto** che invia email tramite EmailJS e scarica automaticamente il CV PDF.
+This project showcases my professional experience, technical skills, and selected web projects as an IT Project Manager and Full Stack Web Developer.
 
 ---
 
-## 📁 Struttura del Progetto
+## 🚀 Features
 
-```
-/ (root)
-├─ index.html              # Pagina principale
-├─ project1.html…project5.html  # Pagine di dettaglio progetto
-├─ styles.css              # Stili globali e variabili CSS
-├─ css/
-│   ├─ skills_section.css   # Stili dedicati alla sezione Skills
-│   ├─ portfolio_section.css # Stili dedicati alla sezione Portfolio
-|   └─ project_section.css  # Stili dedicati alla sezione Progetti
-├─ script.js               # Script per Dark Mode, i18n, CV-download e invio email
-├─ cv_simple_multi.js      # Snippet per download base64 PDF del CV
-└─ assets/
-    ├─ icons/              # Icone (Devicon, ecc.)
-    └─ projects/           # Immagini placeholder o reali dei progetti
-```
+- **Bilingual interface** (Italian & English)
+- **Responsive design** – fully usable on mobile and desktop
+- **Modern UI** with animated sections
+- **Light/Dark mode** toggle with persistent settings
+- **Project gallery** with details and images
+- **Contact form** with email sending (powered by EmailJS)
+- **Secure CV download** (base64 encoded, available in IT and EN)
 
 ---
 
-## 🛠️ Tecnologie Utilizzate
+## 🛠️ Tech Stack
 
-- **HTML5** per il markup semantico.
-- **CSS3** con Custom Properties (variabili) per il tema chiaro/scuro e gradienti.
-- **JavaScript (ES6+)** per:
-  - Toggle **Dark/Light Mode**
-  - Switch **Lingua** con `data-lang`
-  - Animazioni con classi CSS
-  - **Download** dinamico del PDF del CV (base64)
-  - **Invio email** tramite [EmailJS SDK v4](https://www.emailjs.com)
-- **Devicon** per le icone delle tecnologie.
-- **EmailJS** per l’invio client-side delle email di contatto.
+- **HTML5**
+- **CSS3** (modular SCSS structure)
+- **JavaScript** (vanilla, no frameworks)
+- **EmailJS** (for contact form)
 
 ---
 
-## ⚙️ Installazione e Deploy
+## 📂 Structure
 
-1. **Clona il repository**
-   ```bash
-   git clone https://github.com/RiccardoMechi/portfolio-riccardo-mechi.git
-   cd portfolio-riccardo-mechi
-   ```
-
-2. **Configura EmailJS se oltre a vedere il sito vuoi anche ospitare il tuo personale portfolio con form attivo**
-   - Registra un account su https://www.emailjs.com.
-   - Crea un servizio (es. Gmail o SMTP) e un template con le variabili: `name`, `email`, `message`.
-   - Copia il tuo **Service ID**, **Template ID** e **Public Key**.
-   - Nel `index.html`, sostituisci la public key in:
-     ```html
-     <script>
-       emailjs.init('public_XXXXXXXXXXXX');
-     </script>
-     ```
-   - In `script.js`, imposta i tuoi `service_id` e `template_id` in `emailjs.sendForm(...)`.
-
-3. **Ottimizza Risorse** (opzionale ma consigliato)
-   - Comprime immagini con [TinyPNG](https://tinypng.com) o ImageOptim.
-   - Minifica `styles.css` e `script.js` per produzione.
-
-4. **Pubblica**
-   - Puoi farne il deploy su GitHub Pages, Netlify, Vercel o un qualsiasi hosting statico.
+- `index.html` – Main page (about, skills, projects, contacts)
+- `/assets/` – Images and icons
+- `/css/` – Modular CSS files
+- `script.js` – Main site logic
+- `cv_simple_multi.js` – Contains base64-encoded CVs
+- *(Optionally: utility scripts for CV base64 encoding)*
 
 ---
 
-## 🎨 Personalizzazione
+## 📄 How to Use
 
-- **Colori & Tipografia**: modifica le [CSS custom properties](./styles.css) in `:root` e `.dark-mode`.
-- **Lingue**: per aggiungere un’altra lingua, estendi gli attributi `data-lang="xx"` e lo script di switch.
-- **Progetti**: duplica `project-template.html`, rinominalo, e aggiorna titoli, descrizioni e immagini.
+1. **Clone or download** this repository.
+2. Open `index.html` in your browser.
+3. All features work locally – no server required.
 
----
-
-## 📞 Contatti
-
-- **Email**: riccardo.mechi@gmail.com
-- **LinkedIn**: [linkedin.com/in/riccardo-mechi](https://linkedin.com/in/riccardo-mechi)
+**To send emails via the contact form:**  
+You need a free [EmailJS](https://www.emailjs.com/) account and your public key/service/template IDs configured in the JavaScript files.
 
 ---
 
-*Ready to deploy your personal portfolio?* 🎉
+## 📧 Contact
 
+- [LinkedIn](https://www.linkedin.com/in/riccardomechi/)
+- Email: [riccardo.mechi@gmail.com](mailto:riccardo.mechi@gmail.com)
 
+---
+
+## ⚠️ Privacy Notice
+
+Your CV files are **base64 encoded** and can only be accessed by clicking the dedicated button on the site.  
+No personal data is collected or tracked.
+
+---
+
+## 📝 License
+
+This project is for personal/professional portfolio use.  
+Feel free to fork or reuse the structure, but please **credit the author** if you do so.
+
+---
+
+> Made with ❤️ by Riccardo Mechi

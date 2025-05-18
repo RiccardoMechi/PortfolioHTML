@@ -292,6 +292,36 @@ input, textarea {
   border-radius: 4px;
 }
 
+#message {
+  max-width: 100%;
+  width: 100%;
+  resize: vertical !important; /* permette solo di allungare in altezza, NON in larghezza */
+  box-sizing: border-box; /* utile per padding/border */
+}
+
+.cv-download-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 1.5em 0 0 0;
+}
+
+#cv-download-btn {
+  background-color: #388e3c;
+  color: #fff;
+  border: none;
+  padding: 0.9em 1.5em;
+  font-size: 1.1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#cv-download-btn:hover {
+  background: #256424;
+}
+
+
+
 button {
   /*background-color: #1a73e8;*/
   background-color: var(--footer-bg);
